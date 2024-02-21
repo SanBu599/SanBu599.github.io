@@ -1,432 +1,585 @@
-/* 
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 
-Code this website with me in a video codealong:
-https://youtu.be/wBQvr57UD2U
-
-Github repo for a better folder structure:
-https://github.com/FilipRastovic/clean-resume
-
-*/
-
-// Set a custom color
-$blue: #4A90E2 !default;
-$bg: #E9EDF0;
-body {
-  background: #000;
+#skill-list {
+  font-size: 75px;
+  text-align: center;
 }
 
-$content-bg-light: #F8F9FA;
-$content-bg-dark: #1e1f26;
-
-$card-bg-light: #fff;
-$card-bg-dark: #202229;
-
-// Set primary color to orange
-$primary: $blue !default;
-
-// Font overrides
-$font-family-sans-serif: "Merriweather Sans",
--apple-system,
-BlinkMacSystemFont,
-"Segoe UI",
-Roboto,
-"Helvetica Neue",
-Arial,
-"Noto Sans",
-sans-serif,
-"Apple Color Emoji",
-"Segoe UI Emoji",
-"Segoe UI Symbol",
-'Noto Color Emoji' !default;
-
-$font-family-serif: "Merriweather",
--apple-system,
-BlinkMacSystemFont,
-"Segoe UI",
-Roboto,
-"Helvetica Neue",
-Arial,
-"Noto Sans",
-sans-serif,
-"Apple Color Emoji",
-"Segoe UI Emoji",
-"Segoe UI Symbol",
-'Noto Color Emoji' !default;
-
-$font-family-base: $font-family-serif !default;
-
-$headings-font-family: $font-family-sans-serif !default;
-
-html,
-body {
-	font-family: 'Open Sans', sans-serif;
+#status {
+  opacity: 0;
 }
 
-body {
-	background: #fafafa;
-	overflow-x: hidden;
-
-
-	@media (min-width: 768px) {
-		overflow-y: hidden;
-	}
+hr {
+    height: 2px;
+    background-color:#555;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 75%;
 }
 
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-	font-family: 'Open Sans', sans-serif;
-	line-height: 1.5;
+#contact > p {
+  color: black !important;
 }
 
-h1 {
-	font-size: 48px;
+#contact-row {
+  text-align: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
-h2 {
-	font-size: 32px;
+#contact-row > li {
+  display: inline-block;
+  width: 50%;
 }
 
-h3 {
-	font-size: 24px;
+#contact-row > li:hover {
+  color: white;
 }
 
-h4 {
-	font-size: 20px;
+#contact-row > li > a > i{
+  margin-top: 5%;
+  font-size: 25px;
 }
 
-h5 {
-	font-size: 16px;
+#portfolio-btn-container {
+  text-align: center;
 }
 
-h6 {
-	font-size: 14px;
-	margin-bottom: 6px;
+#portfolio-btn {
+  line-height: 1.5;
+  border-radius: 300px;
+  padding: 1rem 2rem;
+  font-weight: 700;
+  font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+  color: #7f4c41;
+  font-size: 16px;
+  letter-spacing: 0px;
+  background-color: #f8f9fa;
 }
 
-p {
-	font-size: 14px;
+#portfolio-btn:hover {
+  background-color: #e2e6ea;
 }
 
-p.large-copy {
-	font-size: 16px;
+#portfolio-btn:focus {
+  outline:none;}
+
+#project1 {
+  background: url(https://github.com/htmercury/google-homepage/blob/master/google-homepage-screenshot.jpg?raw=true);
+  background-size: cover;
+  background-position: center;
 }
 
-p.copy {
-	font-size: 14px;
+#project2 {
+  background: url(https://github.com/htmercury/FCC-Tribute-Page/blob/master/FCC-Tribute-Page-Screenshot.jpg?raw=true);
+  background-size: cover;
+  background-position: center-top;
 }
 
-.caption {
-	font-size: 12px;
+.project-container {
+  height: 300px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  transition: transform 0.2s;
+  display: flex;
 }
 
-@mixin text-link--large {
-	font-size: 16px;
+.project-links {
+  text-align: center;
 }
 
-.text-link--small {
-	font-size: 14px;
+.project-btn {
+  background: #ededed;
+  color: #24292F;
+  border: 1px solid black;
+  margin: 5px;
 }
 
-label,
-.label {
-	font-size: 14px;
-	font-weight: 600;
+.unfinished {
+  background:  #343131;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.label-large {
-	font-size: 16px;
+.project-desc {
+  position: absolute;
+  width: 90%;
+  left: 5%;
+  top: 5%;
+  display: none;
 }
 
-.wrapper .container {
-	border-radius: 6px;
-	box-shadow: 0 1px 6px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset;
-
-	@media (min-width: 1400px) {
-		margin: 50px auto;
-	}
+.project-desc > h3 {
+  color: #fbcfc6;
 }
 
-.background-blue {
-	background: $blue;
+.project-desc > p {
+  color: white;
 }
 
-.blue {
-	color: $blue;
+.project-btn:hover {
+  background: #24292F;
+  color: #ededed;
 }
 
-.sidebar {
-	padding: 32px;
-
-	img {
-		box-shadow: 0 1px 32px rgba(20, 23, 26, 0.12);
-	}
-
-	figcaption {
-		margin-top: 32px;
-		font-size: 48px;
-		font-weight: 600;
-		line-height: 1;
-
-		small {
-			font-size: 32px;
-			font-weight: inherit;
-		}
-	}
-
-	.main-menu {
-		li {
-			border-bottom: 1px solid #fff;
-			padding: 15px 0;
-			transition: .3s ease-out;
-
-			a {
-				@include text-link--large;
-				transition: inherit;
-
-				i {
-					margin: 0 12px 0 18px;
-				}
-			}
-
-		}
-	}
+.project-container:hover {
+  transform: scale(1.05, 1.05);
+  box-shadow: 0px 0px 0px 2000px rgba(0, 0, 0, 0.6) inset;
 }
 
-.content {
-	padding: 20px 15px;
-	background: $content-bg-light;
+.unfinished:hover {
+  background:url(http://05ac63e63ea6fa4dc0c3f350.rnedjhejdcqoto.maxcdn-edge.com/wp-content/uploads/sites/9/2017/06/coming-soon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  boxshadow: 0px 0px 0px 2000px rgba(0, 0, 0, 0.3) inset;
+}
+
+.project-container:hover > .project-desc {
+  display: block;
+}
+
+/* ---------------------------------------------------
+    CUSTOM TYPED.JS CURSOR
+----------------------------------------------------- */
+/*Add custom cursor so it auto inherits font styles*/
+.typed::after {
+	content: '|';
+	display: inline;
+	-webkit-animation: blink 0.9s infinite;
+	-moz-animation: blink 0.9s infinite;
+	animation: blink 0.9s infinite;
+}
+
+/*Removes cursor that comes with typed.js*/
+.typed-cursor{
+   opacity: 0;
 	display: none;
-
-	&.active {
-		display: block;
-	}
-
-
-
-	@media (min-width: 768px) {
-		height: 703px;
-		padding: 40px 35px;
-		animation: .3s ease 1 slideInFromRight;
-	}
-
+}
+/*Custom cursor animation*/
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
 }
 
-.slide-to-right {
-	animation: 1s ease 1 slideToRight;
+.wrapper {
+  padding: 0 !important;
 }
 
-@keyframes slideToRight {
-	0% {
-		transform: translateX(0);
-	}
-
-	100% {
-		transform: translateX(120%);
-	}
+body {
+  font-family: "Poppins", sans-serif;
+  background: #fafafa;
 }
 
-@keyframes slideInFromRight {
-	0% {
-		transform: translateX(120%);
-	}
-
-	100% {
-		transform: translateX(0);
-	}
+p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1em;
+  font-weight: 300;
+  line-height: 1.7em;
+  color: #999;
 }
 
-.card {
-	padding: 25px;
-	border-color: transparent;
-	box-shadow: 0 1px 32px rgba(20, 23, 26, 0.12);
-	transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
-	border-radius: 3px;
-	background-color: $card-bg-light; //$card-bg-light;
-
-	p {
-
-		&:last-of-type {
-			margin-bottom: 35px;
-		}
-	}
-
-	// Profesisonal title of the person.
-	.title {
-		color: $blue;
-
-		i {
-			margin-right: 5px;
-		}
-	}
-
-	// Styles for the "interests" section of the main card.
-	.interests {
-		.col-md-2 {
-			&:hover {
-				background: #fafafa;
-			}
-		}
-
-		i {
-			font-size: 30px;
-			color: $blue;
-		}
-	}
-
-	// Styles for the little cards that contain stats of the person.
-	&--stats {
-
-		padding: 15px 10px;
-
-		i {
-			font-size: 30px;
-			color: $blue;
-		}
-
-		p {
-			font-size: 12px;
-			color: $blue;
-		}
-
-	}
+a, a:hover, a:focus {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s;
 }
 
-.sideline {
-	overflow: hidden;
-
-	&:before,
-	&:after {
-		background-color: #000;
-		content: "";
-		display: inline-block;
-		height: 1px;
-		position: relative;
-		vertical-align: middle;
-		width: 50%;
-	}
-
-	&:before {
-		right: 0.5em;
-		margin-left: -50%;
-	}
-
-	&:after {
-		left: 0.5em;
-		margin-right: -50%;
-	}
+.navbar {
+  padding: 15px 10px;
+  background: rgba(52, 52, 54,0.2);
+  border: none;
+  border-radius: 0;
+  margin-bottom: 40px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-.timeline {
-
-	.job-date {
-		font-size: 14px;
-	}
-
-	@media (min-width: 992px) {
-		.job-date {
-			text-align: right;
-			position: relative;
-
-			&:after {
-				content: '';
-				position: absolute;
-				top: 0;
-				right: -5px;
-				width: 10px;
-				height: 10px;
-				border-radius: 150%;
-				background-color: $blue;
-				z-index: 3;
-				margin-top: 6px;
-			}
-		}
-
-		.job-description {
-			position: relative;
-
-			&:after {
-				content: '';
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 1px;
-				height: 100%;
-				background-color: grey;
-				z-index: 2;
-			}
-		}
-	}
+.navbar-btn {
+  box-shadow: none;
+  outline: none !important;
+  border: none;
 }
 
-.filter-controls {
-
-	li {
-		box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
-		padding: 7px 11px;
-		background: #fafafa;
-		margin-right: 0;
-		margin-bottom: 0.5rem;
-		transition: .3s ease-in;
-
-		&.active {
-			background: $blue;
-			color: #fff;
-		}
-
-		@media (max-width: 768px) {
-			display: block;
-			margin-right: 0.5rem;
-		}
-
-		&:hover,
-		&:focus,
-		&:active {
-			background-color: $blue;
-			color: #fff;
-			cursor: pointer;
-		}
-	}
+.navbar-nav > li > a {
+  color: lightgrey !important;
 }
 
-/* Flaired edges, by Tomas Theunissen */
-.hr-container {
-	width: 100px;
-	height: 1px;
-	background-color: black;
-	position: relative;
-
-	.circle {
-		display: inline-block;
-		vertical-align: middle;
-		width: 10px;
-		height: 10px;
-		background-color: white;
-		border: solid 1px black;
-		border-radius: 50%;
-		position: absolute;
-		top: -6px;
-		left: calc(50% - 5px);
-	}
-
+.navbar-nav > li > a:hover {
+  color: white !important;
 }
 
-.hr-blue {
-	margin-top: 20px;
-	background: #3EB2EF;
+.line {
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px dashed #ddd;
+  margin: 40px 0;
 }
 
-.hr-blue .circle {
-	background: #3EB2EF;
-	border-color: #3EB2EF;
+i, span {
+  display: inline-block;
+}
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+.wrapper {
+  display: flex;
+  align-items: stretch;
+}
+
+#sidebar {
+  min-width: 12%;
+  max-width: 12%;
+  background: #343131;
+  color: #fff;
+  transition: all 0.3s;
+  height: 100%;
+  position: fixed;
+}
+
+#sidebar.active {
+  min-width: 80px;
+  max-width: 80px;
+  text-align: center;
+}
+
+#sidebar.active .sidebar-header h3,
+#sidebar.active .CTAs {
+  display: none;
+}
+
+#sidebar.active .sidebar-header strong {
+  display: block;
+}
+
+#sidebar ul li a {
+  text-align: left;
+}
+
+#sidebar.active ul li a {
+  padding: 20px 10px;
+  text-align: center;
+  font-size: 0.85em;
+}
+
+#sidebar.active ul li a i {
+  margin-right: 0;
+  display: block;
+  font-size: 1.8em;
+  margin-bottom: 5px;
+}
+
+#sidebar.active ul ul a {
+  padding: 10px !important;
+}
+
+#sidebar.active a[aria-expanded="false"]::before,
+#sidebar.active a[aria-expanded="true"]::before {
+  top: auto;
+  bottom: 5px;
+  right: 50%;
+  -webkit-transform: translateX(50%);
+  -ms-transform: translateX(50%);
+  transform: translateX(50%);
+}
+
+#sidebar .sidebar-header {
+  padding: 20px;
+  background: #343131;
+}
+
+#sidebar .sidebar-header strong {
+  display: none;
+  font-size: 1.8em;
+}
+
+#sidebar ul.components {
+  padding: 10px 0;
+  border-bottom: 1px solid #47748b;
+}
+
+#sidebar ul li a {
+  padding: 10px;
+  font-size: 1.1em;
+  display: block;
+}
+#sidebar ul li a:hover {
+  color: #343131;
+  background: #b3b3b3;
+}
+#sidebar ul li a i {
+  margin-right: 10px;
+}
+
+#sidebar ul li.active > a,
+a[aria-expanded="true"] {
+  color: #fff;
+  background: #343131;
+}
+
+a[data-toggle="collapse"] {
+  position: relative;
+}
+
+a[aria-expanded="false"]::before,
+a[aria-expanded="true"]::before {
+  content: "\e259";
+  display: block;
+  position: absolute;
+  right: 20px;
+  font-family: "Glyphicons Halflings";
+  font-size: 0.6em;
+}
+a[aria-expanded="true"]::before {
+  content: "\e260";
+}
+
+ul ul a {
+  font-size: 0.9em !important;
+  padding-left: 30px !important;
+  background: #343131;
+}
+
+ul.CTAs {
+  padding: 20px;
+}
+
+ul.CTAs a {
+  text-align: center;
+  font-size: 0.9em !important;
+  display: block;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+a.download {
+  background: #fff;
+  color: #7386d5;
+}
+
+a.source,
+a.source:hover {
+  background: #6d7fcc !important;
+  color: #fff !important;
+}
+
+#sidebarCollapse {
+  width: 40px;
+  height: 40px;
+  background : #f5f5f5;
+}
+
+#sidebarCollapse span {
+  width: 80%;
+  height: 2px;
+  margin: 0 auto;
+  display: block;
+  background: #555;
+  transition: all 1s cubic-bezier(0.81, -0.33, 0.345, 1.375);
+}
+
+#sidebarCollapse span:first-of-type {
+  /* rotate first one */
+  transform: rotate(45deg) translate(2px, 2px);
+}
+#sidebarCollapse span:nth-of-type(2) {
+  /* second one is not visible */
+  opacity: 0;
+}
+#sidebarCollapse span:last-of-type {
+  /* rotate third one */
+  transform: rotate(-45deg) translate(1px, -1px);
+}
+
+#sidebarCollapse.active span {
+  /* no rotation */
+  transform: none;
+  /* all bars are visible */
+  opacity: 1;
+  margin: 5px auto;
+}
+
+#name {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+#profile {
+  height: auto;
+  width: 95%;
+  margin-left: 2%;
+}
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+#content {
+  margin-left: 80px;
+  background: lightgrey;
+  padding: 0;
+  min-height: 100vh;
+  transition: all 0.3s;
+}
+
+#home {
+  width: 100%;
+  padding-top: 20vh;
+  padding-bottom: 75vh;
+  background-image: url("https://images.unsplash.com/photo-1504719114921-76393a52db10?auto=format&fit=crop&w=1566&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #f7f7f7 !important;
+}
+
+#typed-wrapper {
+  height: 30px;
+}
+
+#shortcut {
+  text-align: center;
+  font-size: 50px;
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  animation: blink 3.4s infinite;
+}
+
+#shortcut > a > i:hover {
+  opacity: 0.4;
+}
+
+#about {
+    color: white;
+    background: #7f4c41;
+}
+    #about > div > div {
+        text-align: center;
+    }
+
+    #about > div > div > p {
+        color: #fbcfc6;
+    }
+
+    #about > div > div > ul {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+        #about > div > div > ul > li {
+            display: inline;
+            font-size: 1.1em;
+        }
+
+            #about > div > div > ul > li > a {
+                display: inline;
+                padding: 12px;
+                margin-right: 12px;
+            }
+
+    #about > p {
+        text-align: center;
+        color: #fbcfc6;
+    }
+
+
+#portfolio {
+  color: #7f4c41;
+  background: #f7f7f7;
+  text-align: center;
+}
+
+#portfolio > p {
+  color: #945d52;
+}
+
+
+
+.pages {
+  margin: 0;
+  width: 100%;
+  padding: 6% 10% 0 10%;
+  display: Inline-block;
+  background: lightgrey;
+  position: relative;
+}
+
+#scrollbar {
+  margin-left: 105px;
+  margin-right: 25px;
+  margin-top: 5px;
+  padding-top: 0;
+  padding: 0 !important;
+  transition: all 0.3s;
+}
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+@media (max-width: 768px) {
+  /* Reversing the behavior of the sidebar: 
+       it'll be rotated vertically and off canvas by default, 
+       collapsing in on toggle button click with removal of 
+       the vertical rotation.   */
+  #sidebar {
+    margin-left: -250px;
+    transform: rotateY(100deg);
+  }
+  #sidebar.active {
+    margin-left: 0;
+    transform: none;
+  }
+
+  /* Reversing the behavior of the bars: 
+       Removing the rotation from the first,
+       last bars and reappear the second bar on default state, 
+       and giving them a vertical margin */
+  #sidebarCollapse span:first-of-type,
+  #sidebarCollapse span:nth-of-type(2),
+  #sidebarCollapse span:last-of-type {
+    transform: none;
+    opacity: 1;
+    margin: 5px auto;
+  }
+
+  /* Removing the vertical margin and make the first and last bars rotate again when the sidebar is open, hiding the second bar */
+  #sidebarCollapse.active span {
+    margin: 0 auto;
+  }
+  #sidebarCollapse.active span:first-of-type {
+    transform: rotate(45deg) translate(2px, 2px);
+  }
+  #sidebarCollapse.active span:nth-of-type(2) {
+    opacity: 0;
+  }
+  #sidebarCollapse.active span:last-of-type {
+    transform: rotate(-45deg) translate(1px, -1px);
+  }
+}
+
+@media screen and (min-width: 20em) {
+
+  #contact-row > li {
+    width: 10%;
+  }
+  
 }

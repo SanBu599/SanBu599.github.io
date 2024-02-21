@@ -1,350 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-        <link rel="stylesheet" href="style.css" />
-        <script src="index.js"></script>
-        <title>Document</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" />
+</head>
 <body>
-    <section class="wrapper">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-sm-12 col-md-5 col-lg-3 text-white sidebar background-blue">
-                    <div class="col-md-12 mx-auto">
-                        <figure class="profile-image mx-auto">
-                            <img class="img-fluid rounded-circle"
-                                src="https://www.clarity-enhanced.net/wp-content/uploads/2020/06/profilna.jpg"
-                                alt="Profile photo">
-                            <figcaption class="text-center"><small class="d-block">Filip</small>Rastovic</figcaption>
-                        </figure>
-                        <ul class="list-unstyled main-menu mt-5">
-                            <li><a class="font-weight-bold text-white" href="#about-me"><i class="fa fa-user-tie "></i>About
-                                    Me</a></li>
-                            <li><a class="font-weight-bold text-white" href="#experience"><i
-                                        class="fas fa-book"></i>Experience</a></li>
-                            <li><a class="font-weight-bold text-white" href="#portfolio"><i
-                                        class="fas fa-toolbox"></i>Portfolio</a></li>
-                            <li><a class="font-weight-bold text-white" href="#contact"><i
-                                        class="far fa-envelope"></i>Contact</a></li>
+    
+<d class="wrapper container-fluid">
+    <!-- Sidebar Holder -->
+    <nav id="sidebar" class="active">
+
+      <div class="sidebar-header">
+        <h3 id="name">Ka Wong</h3>
+        <strong>KW</strong>
+      </div>
+      <img id="profile" class="img-responsive img-circle" src="https://goo.gl/ZFJpvf">
+
+      <ul class="list-unstyled components">
+        <li>
+          <a href="#home">
+            <i class="glyphicon glyphicon-home"></i> Home
+          </a>
+        </li>
+        <li>
+          <a href="#about">
+            <i class="glyphicon glyphicon-briefcase"></i> About
+          </a>
+          <a href="#portfolio">
+            <i class="glyphicon glyphicon-duplicate"></i> Portfolio
+          </a>
+        </li>
+        <li>
+          <a href="#contact">
+            <i class="glyphicon glyphicon-paperclip"></i> Contact
+          </a>
+        </li>
+      </ul>
+      <ul class="list-unstyled CTAs">
+                            <li><a href="https://drive.google.com/file/d/1yy_kazo1aly2y4OcTDuCeuTQ0A7Z6QmJ/view?usp=sharing" target="_blank" class="download">Download Resume</a></li>
+                            <li><a href="https://github.com/htmercury/htmercury.github.io" target="_blank" class="source">Github Source</a></li>
                         </ul>
-                        <ul class="list-unstyled list-inline mt-3 text-center">
-                            <li class="list-inline-item"><a class="text-white" href="#"><i
-                                        class="fab fa-facebook-f"></i></a></li>
-                            <li class="list-inline-item"><a class="text-white" href="#"><i class="fab fa-instagram"></i></a>
-                            </li>
-                            <li class="list-inline-item"><a class="text-white" href="#"><i
-                                        class="fab fa-linkedin-in"></i></a></li>
-                            <li class="list-inline-item"><a class="text-white" href="#"><i class="fab fa-twitter"></i></a>
-                            </li>
-    
+    </nav>
+
+    <!-- Page Content Holder -->
+    <div id="content">
+      <nav id="scrollbar" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" id="sidebarCollapse" class="navbar-btn active">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="https://codepen.io/htmercury/" target="_blank">Codepen <i class="fa fa-codepen"></i></a></li>
+              <li><a href="https://www.freecodecamp.org/htmercury" target="_blank">FCC <i class="fa fa-free-code-camp"></i></a></li>
+              <li><a href="https://github.com/htmercury" target="_blank">Github <i class="fa fa-github"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div id="home" class="pages">
+        <div id="typed-wrapper">
+        <h1>Hi, I'm <span class="typed"></span></h1>
+        </div>
+        <h3 id="status">College Student / Gamer / Frontend Developer</h3>
+        <div id="shortcut">
+        <a href="#about">
+            <i class="glyphicon glyphicon-chevron-down"></i>
+          </a>
+        </div>
+      </div>
+      <div id="about" class="pages">
+        <div class="row">
+          <div class="col-xs-12 col-md-4">
+            <img src="https://res.cloudinary.com/htmercury/image/upload/q_100,r_15/v1517893789/pink_panther.jpg">
+          </div>
+          <div class="col-xs-12 col-md-8">
+        <h2>About Me</h2>
+        <p>Hello! Once again, I am Ka Wong! I am from Chicago, Illinois and currently a undergrad student at X university. I learn Web Development during my free time from The Odin Project and Free Code Camp. I am a fan of thin crust pizza, ping pong, and the oxford comma.</p>
+          <ul class="list-unstyled CTAs">
+                            <li><a href="https://drive.google.com/file/d/1yy_kazo1aly2y4OcTDuCeuTQ0A7Z6QmJ/view?usp=sharing" target="_blank" class="download">Download Resume</a></li>
+                            <li><a href="https://github.com/htmercury/htmercury.github.io" target="_blank" class="source">Github Source</a></li>
                         </ul>
-                    </div>
+          </div>
+        </div>
+        <br>
+        <h2 class="text-center">My Skills</h2>
+        <p>Through coursework and self taught material from FCC and The Odin Project, I am experienced and familiar with these languages and frameworks.</p>
+        <ul id="skill-list" class="list-inline">
+          <li>
+            <i class="devicon-html5-plain-wordmark colored"></i>
+          </li>
+          <li>
+            <i class="devicon-css3-plain-wordmark colored"></i>
+          </li>
+          <li>
+            <i class="devicon-javascript-plain colored"></i>
+          </li>
+          <li>
+            <i class="devicon-jquery-plain-wordmark colored"></i>
+          </li>
+          <li>
+            <i class="devicon-bootstrap-plain-wordmark colored"></i>
+          </li>
+          <li>
+            <i class="devicon-git-plain-wordmark colored"></i>
+          </li>
+          <li>
+            <i class="devicon-cplusplus-plain-wordmark colored"></i>
+          </li>
+          <li>
+            <i class="devicon-csharp-plain-wordmark colored"></i>
+          </li>
+          <li>
+            <i class="devicon-python-plain-wordmark colored"></i>
+          </li>
+        </ul>
+        <div id="portfolio-btn-container">
+        <a href="#portfolio">
+          <button type="button" id="portfolio-btn" class="btn btn-light btn-lg">
+            MY PORTFOLIO
+            </button>
+        </a>
+        </div>
+        <div class="line"></div>
+      </div>
+      <div id="portfolio" class="pages">
+        <h2>Portfolio</h2>
+        <p>Provided below are various projects I have completed from Free Code Camp(FCC), The Odin Project(TOP), and self-interest/enjoyment.</p>
+        <hr class="my-1">
+          <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-4">
+              <div id="project1" class="project-container">
+                <div class="project-desc">
+                                    <h3 class="text-center">Google Homepage</h3>
+                  <p class="text-center">The Odin Project(TOP) Web Development 101's first project: A webpage that mimics the appearance of google search with HTML and CSS</p>
+                  <div class="project-links">
+                    <a href="https://codepen.io/htmercury/full/JOZgea/" target="_blank">
+                      <button type="button" class="btn project-btn">
+                        Demo <i class="fa fa-codepen"></i>
+                      </button>
+                    </a>
+                    <a href="https://github.com/htmercury/google-homepage/" target="_blank">
+                      <button type="button" class="btn project-btn">
+                        Code <i class="fa fa-github"></i>
+                      </button>
+                    </a>
+                  </div>
                 </div>
-                <div id="about-me" data-simplebar class="col-12 col-sm-12 col-md-7 col-lg-9 content about-me active">
-                    <div class="card about-me">
-                        <h3 class="sideline font-weight-bold mb-2">About Me</h3>
-                        <div class="label title mb-2"><i class="fas fa-code"></i>Web Developer - Designer</div>
-                        <p> I grew up in Sremska Kamenica, suburban neighborhood of Novi Sad, where I also finished
-                            elementary school.
-                            As a kid I would spend my time making toys, reading comics, epic fantasy novels and playing
-                            video games.
-                            During high school, I played guitar in the school orchestra, worked on technical support and
-                            special effects
-                            for the school theatre and designed bunch of educational animations. During college I started
-                            developing small video games as a hobby and began my career as a freelancer utilizing everything
-                            I’ve
-                            learned through education and on my own.
-                        </p>
-                        <p>I’m passionate about technology and developing creative solutions
-                            to whichever problem I come across. I’m an avid reader and music lover.</p>
-                        <h3 class="sideline font-weight-bold mb-3">Hobbies and Interests</h3>
-                        <div class="row interests">
-                            <div class="col-4 col-md-4 col-lg-2 text-center mt-3">
-                                <i class="fas fa-tree mb-3"></i>
-                                <h6 class="font-weight-bold">Outdoors</h6>
-                            </div>
-                            <div class="col-4 col-md-4 col-lg-2 text-center mt-3">
-                                <i class="fas fa-guitar mb-3"></i>
-                                <h6 class="font-weight-bold">Guitar</h6>
-                            </div>
-                            <div class="col-4 col-md-4 col-lg-2 text-center mt-3">
-                                <i class="fas fa-book mb-3"></i>
-                                <h6 class="font-weight-bold">Books</h6>
-                            </div>
-                            <div class="col-4 col-md-4 col-lg-2 text-center mt-3">
-                                <i class="fas fa-desktop mb-3"></i>
-                                <h6 class="font-weight-bold">Computers</h6>
-                            </div>
-                            <div class="col-4 col-md-4 col-lg-2 text-center mt-3">
-                                <i class="fas fa-gamepad mb-3"></i>
-                                <h6 class="font-weight-bold">Game Dev</h6>
-                            </div>
-                            <div class="col-4 col-md-4 col-lg-2 text-center mt-3">
-                                <i class="fas fa-plane mb-3"></i>
-                                <h6 class="font-weight-bold">Travel</h6>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div class="row mt-5">
-                        <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-3">
-                            <div class="card card--stats d-flex flex-row align-items-center">
-                                <i class="fas fa-award ml-2"></i>
-                                <div class="text-wrapper">
-                                    <h5 class="font-weight-bold ml-3 mb-0">7 Years</h5>
-                                    <p class="ml-3 mb-0">Work experience</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-3">
-                            <div class="card card--stats d-flex flex-row align-items-center">
-                                <i class="fas fa-users"></i>
-                                <div class="text-wrapper">
-                                    <h5 class="font-weight-bold ml-3 mb-0">30 Clients</h5>
-                                    <p class="ml-3 mb-0">Delivered</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-3">
-                            <div class="card card--stats d-flex flex-row align-items-center">
-                                <i class="far fa-check-circle"></i>
-                                <div class="text-wrapper">
-                                    <h5 class="font-weight-bold ml-3 mb-0">37 Projects</h5>
-                                    <p class="ml-3 mb-0">Delivered</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-3">
-                            <div class="card card--stats d-flex flex-row align-items-center">
-                                <i class="fas fa-wrench"></i>
-                                <div class="text-wrapper">
-                                    <h5 class="font-weight-bold ml-3 mb-0">Available</h5>
-                                    <p class="ml-3 mb-0">For hire</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="experience" data-simplebar class="col-12 col-sm-12 col-md-7 col-lg-9 content experience">
-                    <div class="card">
-                        <h3 class="font-weight-bold sideline mb-3">Experience</h3>
-                        <div class="timeline">
-                            <div class="job row">
-                                <div class="col-12 col-sm-12 col-md-12 col-lg-3 job-date blue">
-                                    <i class="far fa-calendar-alt mr-2"></i>02/14 – 07/15
-                                </div>
-                                <div class="col-12 col-md-12 col-lg-9 job-description">
-                                    <h6 class="font-weight-bold">Web Developer - BeerLove Digital Agency</h6>
-                                    <h6 class="blue">WordPress, HTML, SCSS, gulp.js, JavaScript, jQuery, React.js</h6>
-                                    <p>Build WordPress themes utilizing Elementor page builder and Gulp.js in order to
-                                        implement designs from Figma into a working Elementor
-                                        website with great backend UX. Writing maintainable and scaleable SCSS, handling all
-                                        interactions using jQuery.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="job row">
-                                <div class="col-12 col-sm-12 col-md-12 col-lg-3 job-date blue">
-                                    <i class="far fa-calendar-alt mr-2"></i>02/12 – 07/13</div>
-                                <div class="col-md-12 col-lg-9 job-description">
-                                    <h6 class="font-weight-bold">Web Developer - Designer - LoveBeer Solutions Advertising
-                                        Agency</h6>
-                                    <h6 class="blue">Adobe XD, Photoshop, HTML, CSS, JavaScript, SCSS, ExpressionEngine</h6>
-                                    <p>Working on large scale web sites written in semantic HTML utilizing gulp.js and
-                                        Bootstrap. Writing modular and scaleable SCSS and integrating it all into
-                                        ExpressionEngine.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="job row">
-                                <div class="col-12 col-sm-12 col-md-12 col-lg-3 job-date blue"><i
-                                        class="far fa-calendar-alt mr-2"></i>02/12 – 07/13</div>
-                                <div class="col-md-12 col-lg-9 job-description">
-                                    <h6 class="font-weight-bold">JavaScript Developer</h6>
-                                    <h6 class="blue">HTML, SCSS, JavaScript, jQuery</h6>
-                                    <p>Implementing new features writing modern JavaScript. Fixing bugs, HTML, CSS
-                                        enhancements, compass.js.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card mt-5">
-                        <h3 class="font-weight-bold sideline mb-3">Education</h3>
-                        <div class="timeline">
-                            <div class="job row">
-                                <div class="col-12 col-sm-12 col-md-12 col-lg-3 job-date blue"><i
-                                        class="far fa-calendar-alt mr-2"></i>02/12 – 07/13</div>
-                                <div class="col-md-12 col-lg-9 job-description">
-                                    <h6 class="font-weight-bold">Beer Loving University</h6>
-                                    <h6 class="blue">Computer Science</h6>
-                                    <p>Department of applied computer science and informatics. I have understanding of data
-                                        structures,
-                                        computer architecture, object oriented programming, design patterns, software
-                                        engineering
-                                        methodologies and web development concepts. I’m also familiar with HCI concepts,
-                                        machine
-                                        learning and web security.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="job row">
-                                <div class="col-12 col-sm-12 col-md-12 col-lg-3 job-date blue"><i
-                                        class="far fa-calendar-alt mr-2"></i>02/12 – 07/13</div>
-                                <div class="col-md-12 col-lg-9 job-description">
-                                    <h6 class="font-weight-bold">“Svetozar Marković” Gymnasium</h6>
-                                    <h6 class="blue">Novi Sad</h6>
-                                    <p>General course.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="portfolio" data-simplebar class="col-12 col-sm-12 col-md-7 col-lg-9 content portfolio text-center">
-                    <ul class="filter-controls list-unstyled list-inline">
-                        <li class="list-inline-item active" data-filter="all"> <i class="fas fa-list-ul"></i> All items
-                        </li>
-                        <li class="list-inline-item" data-filter="1"> <i class="fas fa-code"></i> Development </li>
-                        <li class="list-inline-item" data-filter="2"> <i class="fas fa-paint-brush"></i> Design </li>
-                        <li class="list-inline-item" data-filter="3"> <i class="fas fa-camera"></i> Photography </li>
-                    </ul>
-    
-                    <div class="row filter-container mt-3">
-                        <div class="col-md-3 filtr-item" data-category="1" data-sort="value">
-                            <figure class="figure mb-5">
-                                <a class="popup-link"
-                                    href="https://www.clarity-enhanced.net/wp-content/uploads/2020/06/sample1.jpg"><img
-                                        src="https://www.clarity-enhanced.net/wp-content/uploads/2020/06/sample1.jpg"
-                                        class="img-fluid"
-                                        alt="A generic square placeholder image with rounded corners in a figure."></a>
-                                <figcaption class="font-weight-bold figure-caption">A caption for the above image.
-                                </figcaption>
-                            </figure>
-                        </div>
-                        <div class="col-md-3 filtr-item" data-category="2" data-sort="value">
-                            <figure class="figure mb-5">
-                                <a class="popup-link"
-                                    href="https://www.clarity-enhanced.net/wp-content/uploads/2020/06/sample2.jpg"><img
-                                        src="https://www.clarity-enhanced.net/wp-content/uploads/2020/06/sample2.jpg"
-                                        class="img-fluid popup-link"
-                                        alt="A generic square placeholder image with rounded corners in a figure."></a>
-                                <figcaption class="font-weight-bold figure-caption">A caption for the above image.
-                                </figcaption>
-                            </figure>
-                        </div>
-                        <div class="col-md-3 filtr-item" data-category="3" data-sort="value">
-                            <figure class="figure mb-5">
-                                <a class="popup-link"
-                                    href="https://www.clarity-enhanced.net/wp-content/uploads/2020/06/sample3.jpg"><img
-                                        src="https://www.clarity-enhanced.net/wp-content/uploads/2020/06/sample3.jpg"
-                                        class="img-fluid popup-link"
-                                        alt="A generic square placeholder image with rounded corners in a figure."></a>
-                                <figcaption class="font-weight-bold figure-caption">A caption for the above image.
-                                </figcaption>
-                            </figure>
-                        </div>
-                        <div class="col-md-3 filtr-item" data-category="1" data-sort="value">
-                            <figure class="figure mb-5">
-                                <a class="popup-link"
-                                    href="https://www.clarity-enhanced.net/wp-content/uploads/2020/06/sample1.jpg"><img
-                                        src="https://www.clarity-enhanced.net/wp-content/uploads/2020/06/sample1.jpg"
-                                        class="img-fluid popup-link"
-                                        alt="A generic square placeholder image with rounded corners in a figure."></a>
-                                <figcaption class="font-weight-bold figure-caption">A caption for the above image.
-                                </figcaption>
-                            </figure>
-    
-                        </div>
-                        <div class="col-md-3 filtr-item" data-category="2" data-sort="value">
-                            <figure class="figure mb-5">
-                                <a class="popup-link"
-                                    href="https://www.clarity-enhanced.net/wp-content/uploads/2020/06/sample2.jpg"><img
-                                        src="https://www.clarity-enhanced.net/wp-content/uploads/2020/06/sample2.jpg"
-                                        class="img-fluid popup-link"
-                                        alt="A generic square placeholder image with rounded corners in a figure."></a>
-                                <figcaption class="font-weight-bold figure-caption">A caption for the above image.
-                                </figcaption>
-                            </figure>
-                        </div>
-                        <div class="col-md-3 filtr-item" data-category="3" data-sort="value">
-                            <figure class="figure mb-5">
-                                <a class="popup-link"
-                                    href="https://www.clarity-enhanced.net/wp-content/uploads/2020/06/sample3.jpg"><img
-                                        src="https://www.clarity-enhanced.net/wp-content/uploads/2020/06/sample3.jpg"
-                                        class="img-fluid popup-link"
-                                        alt="A generic square placeholder image with rounded corners in a figure."></a>
-                                <figcaption class="font-weight-bold figure-caption">A caption for the above image.
-                                </figcaption>
-                            </figure>
-                        </div>
-                        <div class="col-md-3 filtr-item" data-category="1" data-sort="value">
-                            <figure class="figure mb-5">
-                                <a class="popup-link"
-                                    href="https://www.clarity-enhanced.net/wp-content/uploads/2020/06/sample1.jpg"><img
-                                        src="https://www.clarity-enhanced.net/wp-content/uploads/2020/06/sample1.jpg"
-                                        class="img-fluid popup-link"
-                                        alt="A generic square placeholder image with rounded corners in a figure."></a>
-                                <figcaption class="font-weight-bold figure-caption">A caption for the above image.
-                                </figcaption>
-                            </figure>
-    
-                        </div>
-                        <div class="col-md-3 filtr-item" data-category="2" data-sort="value">
-                            <figure class="figure mb-5">
-                                <a class="popup-link"
-                                    href="https://www.clarity-enhanced.net/wp-content/uploads/2020/06/sample2.jpg"><img
-                                        src="https://www.clarity-enhanced.net/wp-content/uploads/2020/06/sample2.jpg"
-                                        class="img-fluid popup-link"
-                                        alt="A generic square placeholder image with rounded corners in a figure."></a>
-                                <figcaption class="font-weight-bold figure-caption">A caption for the above image.
-                                </figcaption>
-                            </figure>
-                        </div>
-                    </div>
-                </div>
-                <div id="contact" data-simplebar class="col-12 col-sm-12 col-md-7 col-lg-9 content contact">
-                    <div class="row mt-5">
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-5">
-                            <h3 class="font-weight-bold sideline">Contact</h3>
-                            <p>If you would like to get in touch with me feel free to full out this contact form. I ussualy
-                                reply within 2-5 business days. Thanks!</p>
-    
-                            <ul class="list-unstyled">
-                                <li class="font-weight-bold"><a href="#"><i
-                                            class="far fa-envelope mr-2"></i>myemailaddress@example.com</a></li>
-                                <li class="font-weight-bold"><a href="#"><i
-                                            class="fas fa-globe mr-2"></i>www.mywebsite.com</a></li>
-                                <li class="font-weight-bold"><a href="#"><i class="fas fa-map-marker-alt mr-2"></i>Paris,
-                                        France</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-7">
-                            <form class="card">
-                                <div class="form-group">
-                                    <label for="full-name label">Full name</label>
-                                    <input type="text" class="form-control" id="full-name" placeholder="Full name">
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">Email address</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp" placeholder="Enter email">
-                                </div>
-                                <div class="form-group">
-                                    <label for="message">Message:</label>
-                                    <textarea class="form-control" rows="5" id="message"></textarea>
-                                </div>
-    
-                                <button type="submit" class="btn btn-primary">Submit</button>
-                            </form>
-                        </div>
-                    </div>
                 </div>
             </div>
+            <div class="col-xs-12 col-sm-6 col-md-4">
+              <div id="project2" class="project-container">
+                <div class="project-desc">
+                                    <h3 class="text-center">Tribute Page</h3>
+                  <p class="text-center">Free Code Camp (FCC) Front-end Development's first project: A webpage of any topic made with HTML, CSS, and Bootstrap.</p>
+                  <div class="project-links">
+                    <a href="https://codepen.io/htmercury/pen/eeZbrN" target="_blank">
+                      <button type="button" class="btn project-btn">
+                        Demo <i class="fa fa-codepen"></i>
+                      </button>
+                    </a>
+                    <a href="https://github.com/htmercury/FCC-Tribute-Page" target="_blank">
+                      <button type="button" class="btn project-btn">
+                        Code <i class="fa fa-github"></i>
+                      </button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4">
+              <div class="unfinished project-container">
+                <div class="project-desc">
+                  <p class="text-center">Nothing here yet.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4">
+              <div class="unfinished project-container">
+                <div class="project-desc">
+                  <p class="text-center">Nothing here yet.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4">
+              <div class="unfinished project-container">
+                <div class="project-desc">
+                  <p class="text-center">Nothing here yet.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4">
+              <div class="unfinished project-container">
+                <div class="project-desc">
+                  <p class="text-center">Nothing here yet.</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
+      
+      <div id="contact" class="pages text-center">
+        <h3>Contact Information</h3>
+        <p>Working on a project? Like to have a quick chat? Feel free to connect with me anytime.</p>
+        <ul id="contact-row" class="list-inline">
+          <li>
+          <a href="https://www.facebook.com/htmercury" target="_blank">
+            <i class="fa fa-facebook">
+            </i>
+          </a>
+          </li>
+          <li>
+          <a href="https://github.com/htmercury" target="_blank">
+            <i class="fa fa-linkedin">
+            </i>
+          </a>
+          </li>
+          <li>
+          <a href="https://twitter.com/kHtmercury" target="_blank">
+            <i class="fa fa-twitter">
+            </i>
+          </a>
+          </li>
+          <li>
+          <a href="mailto:kawong2020@u.northwestern.edu" target="_blank">
+            <i class="fa fa-envelope">
+            </i>
+          </a>
+          </li>
+        </ul>
+        <hr class="my-4">
+      </div>
+      <div class="text-center footer">
+    <h5>Written and coded by Ka Wong</h5>
+  </div>
+    </div>
 </body>
 </html>
