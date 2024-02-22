@@ -2088,7 +2088,6 @@ input, select, textarea {
 				top: 50%;
 				white-space: nowrap;
 			}
-
 			.image.thumb:hover:after {
 				opacity: 1.0;
 			}
@@ -2193,6 +2192,8 @@ input, select, textarea {
 		cursor: default;
 		list-style: none;
 		padding-left: 0;
+		display: flex;
+		justify-content: space-around;
 	}
 
 		ul.icons li {
@@ -2600,11 +2601,10 @@ input, select, textarea {
 		color: rgba(255, 255, 255, 0.5);
 		height: 100%;
 		left: 0;
-		padding: 8em 4em;
+		padding: 3em 3em;
 		position: fixed;
-		text-align: right;
 		top: 0;
-		width: 35%;
+		width: 20%;
 	}
 
 		#header > * {
@@ -2636,11 +2636,16 @@ input, select, textarea {
 			font-size: 1.35em;
 			line-height: 1.75em;
 			margin: 0;
+			margin-top: 1em;
+		}
+
+		#header div {
+			margin-top: 2em;
 		}
 
 		#header .image.avatar {
 			margin: 0 0 1em 0;
-			width: 6.25em;
+			width: 7.25em;
 		}
 
 /* Footer */
