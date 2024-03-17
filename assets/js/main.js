@@ -16,14 +16,21 @@
 		};
 
 	// Breakpoints.
-		breakpoints({
-			xlarge:  [ '1281px',  '1800px' ],
-			large:   [ '981px',   '1280px' ],
-			medium:  [ '737px',   '980px'  ],
-			small:   [ '481px',   '736px'  ],
-			xsmall:  [ null,      '480px'  ],
-		});
+		// breakpoints({
+		// 	xlarge:  [ '1281px',  '1800px' ],
+		// 	large:   [ '981px',   '1280px' ],
+		// 	medium:  [ '737px',   '980px'  ],
+		// 	small:   [ '481px',   '736px'  ],
+		// 	xsmall:  [ null,      '480px'  ],
+		// });
 
+		breakpoints({
+			xlarge:  [ '1281px',  '1800px', {initial: '100vh'} ],
+			large:   [ '981px',   '1280px', {initial: '100vh'} ],
+			medium:  [ '737px',   '980px',  {initial: '100vh'} ],
+			small:   [ '481px',   '736px',  {initial: '100vh'} ],
+			xsmall:  [ null,      '480px',  {initial: '100vh'} ],
+		});
 	// Play initial animations on page load.
 		$window.on('load', function() {
 			window.setTimeout(function() {
